@@ -1,5 +1,5 @@
 version: 2
-command:
+commands:
   checkout:
     steps:
         path: ~/repo
