@@ -3,5 +3,7 @@ FROM circleci/golang:1.12.5
 ADD coverage.sh /usr/local/bin
 ADD coverage-all.sh /usr/local/bin
 
+RUN cat ~/.bashrc
+
 RUN go get github.com/schrej/godacov
 RUN go get github.com/haya14busa/goverage
