@@ -7,7 +7,7 @@ jobs:
       - checkout:
           path: ~/repo
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -f Dockerfile .
+      - run: docker build hassieswift621/circleci-go-codacy:1.12.4
       - run: docker push hassieswift621/circleci-go-codacy:1.12.4
       
 workflows:
