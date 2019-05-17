@@ -1,4 +1,4 @@
-FROM circleci/golang:1.12.2
+FROM circleci/golang:1.12.0
 
 ADD coverage.sh /
 ADD coverage-all.sh /
