@@ -2,7 +2,8 @@ version: 2.1
 commands:
   dcheckout:
     steps:
-      - checkout
+      - checkout:
+          path: ~/repo
   dlogin:
     steps:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
