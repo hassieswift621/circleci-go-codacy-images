@@ -70,6 +70,7 @@ jobs:
     environment:
       DOCKER_TAG: 1.12.5
     steps:
+      - dcheckout
       - dlogin
       - dbuild
       - dpush
