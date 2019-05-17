@@ -3,13 +3,13 @@ command:
   checkout:
     steps:
         path: ~/repo
-  login:
+  dlogin:
     steps:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-  build:
+  dbuild:
     steps:
       - run: docker build . -t hassieswift621/circleci-go-codacy:${DOCKER_TAG}
-  push:
+  dpush:
     steps:
       - run: docker push hassieswift621/circleci-go-codacy:${DOCKER_TAG}
 jobs:
@@ -19,54 +19,54 @@ jobs:
     environment:
       DOCKER_TAG: 1.12.0
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
   v1.12.1:
     machine: true
     working_directory: ~/repo/1.12.1
     environment:
       DOCKER_TAG: 1.12.1
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
   v1.12.2:
     machine: true
     working_directory: ~/repo/1.12.2
     environment:
       DOCKER_TAG: 1.12.2
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
   v1.12.3:
     machine: true
     working_directory: ~/repo/1.12.3
     environment:
       DOCKER_TAG: 1.12.3
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
   v1.12.4:
     machine: true
     working_directory: ~/repo/1.12.4
     environment:
       DOCKER_TAG: 1.12.4
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
   v1.12.5:
     machine: true
     working_directory: ~/repo/1.12.5
     environment:
       DOCKER_TAG: 1.12.5
     steps:
-      - login
-      - build
-      - push
+      - dlogin
+      - dbuild
+      - dpush
 workflows:
   version: 2
   build:
