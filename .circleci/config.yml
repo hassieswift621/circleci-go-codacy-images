@@ -3,7 +3,6 @@ commands:
   dcheckout:
     steps:
       - checkout
-          path: ~/repo
   dlogin:
     steps:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
@@ -70,7 +69,6 @@ jobs:
     environment:
       DOCKER_TAG: 1.12.5
     steps:
-      - dcheckout
       - dlogin
       - dbuild
       - dpush
