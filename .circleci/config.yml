@@ -13,7 +13,7 @@ commands:
     steps:
       - run: docker push hassieswift621/circleci-go-codacy:${DOCKER_TAG}
 jobs:
-  v1.12.0:
+  v1120:
     machine: true
     working_directory: ~/repo/1.12.0
     environment:
@@ -22,7 +22,7 @@ jobs:
       - dlogin
       - dbuild
       - dpush
-  v1.12.1:
+  v1121:
     machine: true
     working_directory: ~/repo/1.12.1
     environment:
@@ -31,7 +31,7 @@ jobs:
       - dlogin
       - dbuild
       - dpush
-  v1.12.2:
+  v1122:
     machine: true
     working_directory: ~/repo/1.12.2
     environment:
@@ -40,7 +40,7 @@ jobs:
       - dlogin
       - dbuild
       - dpush
-  v1.12.3:
+  v1123:
     machine: true
     working_directory: ~/repo/1.12.3
     environment:
@@ -49,7 +49,7 @@ jobs:
       - dlogin
       - dbuild
       - dpush
-  v1.12.4:
+  v1124:
     machine: true
     working_directory: ~/repo/1.12.4
     environment:
@@ -58,7 +58,7 @@ jobs:
       - dlogin
       - dbuild
       - dpush
-  v1.12.5:
+  v1125:
     machine: true
     working_directory: ~/repo/1.12.5
     environment:
