@@ -1,6 +1,6 @@
 FROM circleci/golang:1.12.5
 
-ADD ["coverage.sh", "coverage-all.sh", "/usr/local/bin"]
+ADD ["coverage.sh", "coverage-all.sh", "/usr/local/bin/"]
 
 RUN ["chmod", "+x", "/usr/local/bin/coverage.sh"] \
     && ["chmod", "+x", "/usr/local/bin/coverage-all.sh"] \
