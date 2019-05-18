@@ -1,9 +1,8 @@
 FROM circleci/golang:1.12.2
 
-ADD coverage.sh /
-ADD coverage-all.sh /
-RUN alias coverage=./coverage.sh
-RUN alias coverage-all=./coverage-all.sh
+ADD coverage coverage-all /usr/local/bin/
 
-RUN go get github.com/schrej/godacov
-RUN go get github.com/haya14busa/goverage
+RUN sudo chmod +x /usr/local/bin/coverage \
+    && sudo chmod +x /usr/local/bin/coverage-all \
+    && go get github.com/schrej/godacov \
+    && go get github.com/haya14busa/goverage

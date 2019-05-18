@@ -1,2 +1,7 @@
+#!/bin/bash
+
+# Generate coverage report.
 goverage -v -coverprofile=coverage.out ./...
+
+# Upload coverage report to Codacy.
 godacov -t $CODACY_PROJECT_TOKEN -r ./coverage.out -c $CIRCLE_SHA1
