@@ -3,8 +3,8 @@ CircleCI build images for Go with Codacy coverage built in.
 
 These images are built using official CircleCI images as the base to ensure all CircleCI features are present.
 
-For Codacy coverage, [https://github.com/schrej/godacov](godacov) is used for single package coverage and
-[https://github.com/haya14busa/goverage](goverage) for multiple package coverage.
+For Codacy coverage, [godacov](https://github.com/schrej/godacov) is used for single package coverage and
+[goverage](https://github.com/haya14busa/goverage) for multiple package coverage.
 
 These images are available on Docker Hub at: <https://hub.docker.com/r/hassieswift621/circleci-go-codacy>
 
